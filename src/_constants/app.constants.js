@@ -1,0 +1,10 @@
+export const SET_USER = "APP.SET_USER";
+export const SET_TOKEN = "APP.SET_TOKEN";
+export const LOGOUT = "APP.LOGOUT";
+
+export const SESSION_EXPIRED = "APP.SESSION_EXPIRED";
+export const NETWORK_ERROR = "APP.NETWORK_ERROR";
+
+export const LOGOUT_REQUEST = "APP.LOGOUT_REQUEST";
+export const LOGOUT_SUCCESS = "APP.LOGOUT_SUCCESS";
+export const LOGOUT_FAILURE = "APP.LOGOUT_FAILURE";

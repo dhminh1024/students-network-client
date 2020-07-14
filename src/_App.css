@@ -1,0 +1,421 @@
+html {
+  background-color: #f0f1f3;
+}
+
+body {
+  height: 100vh;
+}
+
+.App {
+  /* font-family:'CircularStd-Book'; */
+  font-family: 'Montserrat', sans-serif;
+  color: #4e4e4e;
+}
+
+.App-header {
+  text-align: center;
+  height: 150px;
+  padding: 20px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+nav.navbar.main {
+  background-color: white;
+}
+
+.login-button {
+  color: #e13640;
+}
+
+.course-card-main {
+  margin-top: 20px;
+  width: 100%;
+  /* box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.course-card-content {
+  text-align: right;
+  width: 100%;
+  padding: 15px 25px 15px 25px;
+}
+
+.course-card-text {
+  margin-top: 12px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.course-card-link {
+  text-align: right;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  border: solid 1px #4e4e4e;
+  margin-top: 6px;
+}
+
+.avatar-small {
+  margin-bottom: -7px;
+}
+
+.course-avatar-header {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  
+}
+
+.course-menu {
+  padding: 15px;
+  /*
+  position: fixed !important;
+  */
+}
+
+.left-side {
+  background-color: white;
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.1); /* fix left menu shadow */
+}
+
+.current-page {
+  font-weight: 700;
+}
+
+.button-next-unit {
+  margin-top: 25px;
+}
+
+.right-side {
+  background-color: #f0f1f3;
+  min-height: 101vh;
+  height: 100%;
+}
+
+/*
+.main-background {
+  background-color: #f0f1f3;
+  height: 100vh;
+}
+
+.main-container {
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08);
+  padding: 25px 15px 25px 15px;
+}
+*/
+
+.content-overview {
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08);
+  margin: 15px 15px 25px 15px;
+  padding: 0 15px 25px 15px;
+  width: 96.5%;
+}
+
+.logo-link {
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+div.rectangle {
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ffa7a5;
+}
+
+div.sub-headline {
+  margin-top: -15px;
+}
+
+p.course-description {
+  margin-top: 15px;
+}
+
+.active-courses {
+  margin-top: 10px;
+  padding: 25px;
+  padding-bottom: 0;
+}
+
+.available-courses {
+  padding: 25px;
+  margin-top: 15px;
+  width:100%;
+}
+
+.overview-text-content {
+  padding: 25px;
+}
+
+span.clear { clear: left; display: block; }
+
+.overview-deadline-content {
+  padding: 25px;
+}
+
+.card-container-container {
+  width: 100%;
+}
+
+.main-button {
+  border-radius: 100px;
+  background-color: #ff6161;
+  border-color:#ff6161;
+  color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(255, 85, 85, 0.4);
+  width: 140px;
+  height: 30px;
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.fixedbutton {
+  position: fixed;
+  bottom: 25px;
+  right: 50px; 
+  border-radius: 100px;
+  background-color: #ff6161;
+  border-color:#ff6161;
+  color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(255, 85, 85, 0.4);
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pink-rectangle {
+  width: 6px;
+  /* height: 53px; */
+  background-color: #ffa7a5;
+  margin-left: -30px;
+}
+
+.unit-icon {
+  margin-right: -15px;
+}
+
+.unit-done {
+  color: #b8bcc4;
+}
+/*
+.progress-unit {
+  position: absolute;
+  bottom: 25px;
+  max-width: 275px;
+}
+*/
+.unit-progress-divider {
+  border: solid 1px #e7eaee;
+  margin-bottom: 5px;
+}
+
+.progress-container {
+  margin-top: 30px;
+  width: 36vh;
+}
+
+.deadline-progress-date {
+  font-size: 14px;
+}
+
+.progress-percent {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+progress.progress {
+  margin-bottom: 5px !important;
+  background-color: #fff2f2;
+}
+
+/* buihdk: change color of Bulma progress bar */
+/* webkit is used for Chrome and Safari */
+.progress.manual-colored::-webkit-progress-value {
+  background-color: #ff6161;
+}
+
+.progress.manual-colored::-webkit-progress-bar {
+  background-color: #fff2f2;
+}
+
+/* moz is used for Firefox */
+.progress.manual-colored::-moz-progress-bar {
+  background-color: #ff6161;
+}
+
+.progress.manual-colored::-ms-fill {
+  background-color:  #ff6161;
+}
+/*----------------------------------------------*/
+
+.unit-menu {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.course-unit-body {
+  margin-top: 15px;
+}
+
+.unit-content {
+  padding: 25px;
+}
+
+.content-unit {
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.08);
+  margin: 65px 15px 25px 15px;
+  padding: 25px 15px 25px 15px;
+}
+
+.user-avatar {
+  float: right;
+  margin-top: 15px;
+  margin-right: 25px;
+}
+
+.user-image {
+  margin-right: 5px;
+}
+
+.user-name {
+  margin-right: 10px;
+  margin-top: 5px;
+
+}
+
+.name {
+  color: #d64541;
+  font-weight: 500;
+}
+
+.avatar-img {
+  border-radius: 50%;
+}
+
+.dropdown-arrow {
+  margin-top: 3px;
+  cursor: pointer;
+  color: #b8bcc4;
+}
+
+.login-container {
+  width: 660px;
+  min-height: 240px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30vh;
+}
+
+.login-content {
+  padding: 25px 25px 15px 25px;
+}
+
+.login-text {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.github-new-button, .tag.main-course-button {
+  border-radius: 100px;
+  background-color: #ffffff;
+  color: #ff6161;
+  box-shadow: 0 2px 4px 0 rgba(255, 85, 85, 0.4);
+  border: solid 1px #ffaaaa;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.github-login-button {
+  border-radius: 100px;
+  background-color: #ff6161;
+  color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(255, 85, 85, 0.4);
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* buihdk: we are using Google fonts for now */
+/* @font-face {
+  font-family: 'ONEDAY';
+  src: local('ONEDAY'), url(./fonts/ONEDAY.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'CircularStd-Book';
+  src: local('CircularStd-Book'), url(./fonts/ONEDAY.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'CircularStd-Medium';
+  src: local('CircularStd-Medium'), url(./fonts/ONEDAY.otf) format('otf');
+} */
+
+/* p.course-card-title {
+  font-family: 'ONEDAY';
+} */
+
+.inner-title {
+  /* font-family: 'CircularStd-Medium'; */
+  font-family: 'Montserrat', sans-serif;
+  color: #4e4e4e;
+  font-weight: 400 !important;
+}
+
+ul {
+  list-style: circle !important;
+  padding: 20px !important;
+  margin-left: 15px !important;
+}
+
+ul.menu-list {
+  list-style: none !important;
+  padding: 0px !important;
+  margin-left: 0px !important;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For tablets and desktops: */
+
+  /* fix progress bar's position */
+  .column.is-one-quarter.left-side {
+    position: relative;
+  }
+  .progress-container {
+    position: absolute;
+    bottom: 0px;
+  }
+}
