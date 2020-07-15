@@ -67,8 +67,8 @@ Navbar.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  token: state.appReducer.token,
-  loading: state.authReducer.loading,
+  token: state.app.token,
+  loading: state.auth.loading,
 });
 
 export default connect(mapStateToProps)(Navbar);

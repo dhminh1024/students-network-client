@@ -4,7 +4,7 @@ import { connect, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { authActions } from "../../_actions/auth.actions";
 
-const Login = ({ token, errors }) => {
+const Login = ({ token, loading, errors }) => {
   const [formData, setFormData] = useState({
     email: "tom@gmail.com",
     password: "123",
@@ -57,11 +57,23 @@ const Login = ({ token, errors }) => {
             <small className="form-text text-danger">{errors.password}</small>
           )}
         </div>
-        <input
-          type="submit"
-          className="btn btn-lg github-login-button"
-          value="Login"
-        />
+
+        {loading ? (
+          <button className="btn btn-lg btn-primary" type="button" disabled>
+            <span
+              className="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+            ></span>
+            Loading...
+          </button>
+        ) : (
+          <input
+            type="submit"
+            className="btn btn-lg btn-primary"
+            value="Login"
+          />
+        )}
       </form>
       <p className="my-1">
         Don't have an account? <Link to="/register">Sign Up</Link>
@@ -72,11 +84,13 @@ const Login = ({ token, errors }) => {
 
 Login.propTypes = {
   token: PropTypes.string,
+  loading: PropTypes.bool,
 };
 
 const mapStateToProps = (state) => ({
-  token: state.appReducer.token,
-  errors: state.authReducer.errors,
+  token: state.app.token,
+  loading: state.auth.loading,
+  errors: state.auth.errors,
 });
 
 export default connect(mapStateToProps)(Login);

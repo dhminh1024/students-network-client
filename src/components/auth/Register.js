@@ -4,7 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import { alertActions, authActions } from "../../_actions";
 import PropTypes from "prop-types";
 
-const Register = ({ token }) => {
+const Register = ({ token, loading, errors }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,6 +55,9 @@ const Register = ({ token }) => {
             value={name}
             onChange={onChange}
           />
+          {errors.name && (
+            <small className="form-text text-danger">{errors.name}</small>
+          )}
         </div>
         <div className="form-group">
           <input
@@ -64,10 +67,9 @@ const Register = ({ token }) => {
             value={email}
             onChange={onChange}
           />
-          {/* <small className="form-text">
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
-          </small> */}
+          {errors.email && (
+            <small className="form-text text-danger">{errors.email}</small>
+          )}
         </div>
         <div className="form-group">
           <input
@@ -77,6 +79,9 @@ const Register = ({ token }) => {
             value={password}
             onChange={onChange}
           />
+          {errors.password && (
+            <small className="form-text text-danger">{errors.password}</small>
+          )}
         </div>
         <div className="form-group">
           <input
@@ -87,7 +92,19 @@ const Register = ({ token }) => {
             onChange={onChange}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        {loading ? (
+          <button className="btn btn-lg btn-primary" type="button" disabled>
+            <span
+              className="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+            ></span>
+            Loading...
+          </button>
+        ) : (
+          <input type="submit" className="btn btn-primary" value="Register" />
+        )}
+
         <button type="button" className="btn btn-light" onClick={fillFakeData}>
           Example
         </button>
@@ -101,10 +118,13 @@ const Register = ({ token }) => {
 
 Register.propTypes = {
   token: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  token: state.appReducer.token,
+  token: state.app.token,
+  loading: state.auth.loading,
+  errors: state.auth.errors,
 });
 
 export default connect(mapStateToProps)(Register);

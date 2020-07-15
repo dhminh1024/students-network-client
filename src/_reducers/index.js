@@ -4,7 +4,7 @@ import authReducer from "./auth.reducer";
 import appReducer from "./app.reducer";
 
 export default combineReducers({
-  appReducer,
-  alertReducer,
-  authReducer,
+  app: appReducer,
+  alert: alertReducer,
+  auth: authReducer,
 });
