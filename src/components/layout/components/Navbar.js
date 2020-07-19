@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { connect, useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { appActions } from "../../_actions";
-import logo from "../../assets/img/logo.svg";
+import { appActions } from "../../../_actions";
+import logo from "../../../assets/img/logo.svg";
 
 const Navbar = ({ token, loading }) => {
   const dispatch = useDispatch();
@@ -18,10 +18,10 @@ const Navbar = ({ token, loading }) => {
         </Link>
       </li> */}
       <li>
-        <Link to="/posts">Posts</Link>
+        <Link to="/user/profile">Profile</Link>
       </li>
       <li>
-        <Link to="/dashboard">
+        <Link to="/admin/dashboard">
           <i className="fas fa-user" />{" "}
           <span className="hide-sm">Dashboard</span>
         </Link>

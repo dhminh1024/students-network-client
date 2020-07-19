@@ -1,5 +1,6 @@
 import produce from "immer";
 import * as types from "../_constants/app.constants";
+import api from "../_utils/api";
 
 export const initialState = {
   user: { isAdmin: false },
@@ -35,10 +36,12 @@ const appReducer = (state = initialState, action = { type: "" }) =>
         break;
       case types.SET_TOKEN:
         localStorage.setItem("token", action.payload);
+        api.defaults.headers.common["x-auth-token"] = action.payload;
         draft.token = action.payload;
         break;
       case types.LOGOUT_REQUEST:
       case types.LOGOUT_SUCCESS:
+        delete api.defaults.headers.common["x-auth-token"];
         localStorage.setItem("token", "");
         localStorage.setItem("routes", "");
         draft.user = {};
